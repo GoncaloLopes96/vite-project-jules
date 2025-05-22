@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# LLM RAM Usage Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project provides a straightforward tool for estimating the RAM requirements when running large language models (LLMs). It helps developers and researchers understand the memory footprint of various model configurations.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Calculate RAM usage based on:
+  - Model size (in billions of parameters)
+  - Context length (number of tokens)
+  - Quantization type (FP16, INT8, INT4)
+  - Batch size
+- Clean, intuitive user interface
+- Real-time calculations
 
-## Expanding the ESLint configuration
+## Technology Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This application is built with:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React 18
+- TypeScript
+- Vite for fast development and optimized builds
+- CSS for styling
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Simply adjust the sliders and input fields to match your model configuration:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+1. Enter the model size in billions of parameters
+2. Set the context length (token count)
+3. Select the quantization type
+4. Specify the batch size
+
+The estimated RAM requirements will be calculated and displayed instantly.
+
+## Installation
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/llm-ram-calculator.git
+
+# Navigate to the project directory
+cd llm-ram-calculator
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
