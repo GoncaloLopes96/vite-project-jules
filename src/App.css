@@ -1,21 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General App Styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+.App-header {
+  margin-bottom: 30px;
+}
+
+.App-header h1 {
+  color: #2c3e50;
+  font-size: 2em;
+  margin: 0;
+}
+
+/* Form Specific Styling */
+.ram-calculator-form {
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #34495e;
+}
+
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: #333;
+}
+
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Estimated RAM Display Styling */
+.estimated-ram-display {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #eafaf1;
+  border: 1px solid #b8e9d1;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.estimated-ram-display p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1e824c;
+  margin: 0;
+}
+
+/* Remove default Vite styles if they exist and are not needed */
+#root {
+  /* text-align: center; */ /* Already handled by .App */
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  /* height: 6em; */ /* Remove if not used */
+  /* padding: 1.5em; */ /* Remove if not used */
+  /* will-change: filter; */ /* Remove if not used */
+  /* transition: filter 300ms; */ /* Remove if not used */
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  /* filter: drop-shadow(0 0 2em #646cffaa); */ /* Remove if not used */
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  /* filter: drop-shadow(0 0 2em #61dafbaa); */ /* Remove if not used */
 }
 
 @keyframes logo-spin {
@@ -29,14 +113,14 @@
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    /* animation: logo-spin infinite 20s linear; */ /* Remove if not used */
   }
 }
 
 .card {
-  padding: 2em;
+  /* padding: 2em; */ /* Remove if not used */
 }
 
 .read-the-docs {
-  color: #888;
+  /* color: #888; */ /* Remove if not used */
 }
