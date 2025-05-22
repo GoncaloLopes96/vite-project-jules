@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { calculateRamUsage, RamCalculationParams } from './ramCalculator';
+import { calculateRamUsage } from './ramCalculator';
+import type { RamCalculationParams } from './ramCalculator';
 
 describe('calculateRamUsage', () => {
   it('should correctly calculate RAM usage for FP16', () => {

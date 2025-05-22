@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import RamCalculatorForm from './components/RamCalculatorForm';
-import { calculateRamUsage, RamCalculationParams } from './lib/ramCalculator';
+import { calculateRamUsage } from './lib/ramCalculator';
+import type { RamCalculationParams } from './lib/ramCalculator';
 
 function App() {
   const [modelSizeInBillions, setModelSizeInBillions] = useState<number>(7);
